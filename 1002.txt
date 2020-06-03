@@ -1,0 +1,58 @@
+import java.util.*;
+public class Main {
+	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
+		String content = input.nextLine();
+		int count = 0;
+		int len = content.length();
+		ArrayList<Integer> list = new ArrayList();
+		for(int i=0;i<len;i++) {
+			list.add((int)content.charAt(i)-48);
+		}
+			
+		
+		for (Integer value:list) {
+			count +=value;
+		}
+		String strCount = Integer.toString(count);
+		for(int i = 0;i<strCount.length();i++) {
+			switch(strCount.charAt(i)) {
+			case '1':
+				System.out.print("yi");
+				break;
+			case '2':
+				System.out.print("er");
+				break;
+			case '3':
+				System.out.print("san");
+				break;
+			case '4':
+				System.out.print("si");
+				break;
+			case '5':
+				System.out.print("wu");
+				break;
+			case '6':
+				System.out.print("liu");
+				break;
+			case '7':
+				System.out.print("qi");
+				break;
+			case '8':
+				System.out.print("ba");
+				break;
+			case '9':
+				System.out.print("jiu");
+				break;
+			case '0':
+				System.out.print("ling");
+				break;
+			}
+			if(i<strCount.length()-1)
+				System.out.print(" ");
+		}
+	
+	
+	}
+	
+}
